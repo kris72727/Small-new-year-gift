@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Special Surprise</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="bg-hearts" id="bg-hearts"></div>
+    
+    <div id="app">
+        <section class="screen active" id="welcome">
+            <div class="glass-card">
+                <h1 class="glow-text">2026</h1>
+                <p>Heyy Princess, I made something special for you...</p>
+                <button onclick="nextScreen('bucket-list')">Let's See ✨</button>
+            </div>
+        </section>
+
+        <section class="screen" id="bucket-list">
+            <div class="glass-card">
+                <h2>Goals for 2026 📝</h2>
+                <div class="list-container">
+                    <div class="list-item"><input type="checkbox"> <span>Visit your favorite place</span></div>
+                    <div class="list-item"><input type="checkbox"> <span>Read more books together</span></div>
+                    <div class="list-item"><input type="checkbox"> <span>Take care of your health</span></div>
+                    <div class="list-item"><input type="checkbox"> <span>Spend more quality time</span></div>
+                </div>
+                <button onclick="nextScreen('memories')">Next ❤️</button>
+            </div>
+        </section>
+
+        <section class="screen" id="memories">
+            <div class="glass-card">
+                <h2>A Thought 📸</h2>
+                <div class="photo-frame">
+                    <img src="photo.jpg" alt="Our Memory">
+                </div>
+                <p class="caption">"Your presence makes everything better."</p>
+                <button onclick="nextScreen('music')">A Song for You 🎵</button>
+            </div>
+        </section>
+
+        <section class="screen" id="music">
+            <div class="glass-card">
+                <h2>Dedicated to You</h2>
+                <div class="cassette">
+                    <p class="song-title">High On You 🎶</p>
+                    <audio id="bgMusic" controls>
+                        <source src="song.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <button onclick="finish()">Final Surprise 🎁</button>
+            </div>
+        </section>
+
+        <section class="screen" id="final">
+            <div class="glass-card">
+                <h1 class="glow-text">Happy New Year!</h1>
+                <div class="final-note">
+                    <p>May 2026 be filled with love and joy for us. You are my everything! ❤️</p>
+                </div>
+                <button onclick="location.reload()">Restart Journey 🔄</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
